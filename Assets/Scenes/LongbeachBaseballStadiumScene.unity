@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 62251486}
   - component: {fileID: 62251485}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SecondAnswerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -699,6 +699,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 215519042}
         m_MethodName: ShowQuestionPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 215519042}
+        m_MethodName: TriggerFirstBaseQuestion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1360,7 +1371,7 @@ GameObject:
   - component: {fileID: 425640101}
   - component: {fileID: 425640100}
   m_Layer: 5
-  m_Name: QuestionText
+  m_Name: PickBaseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2122,7 +2133,7 @@ GameObject:
   - component: {fileID: 688061531}
   - component: {fileID: 688061530}
   m_Layer: 5
-  m_Name: Text
+  m_Name: FirstAnswerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3008,6 +3019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848932695}
+  - component: {fileID: 848932696}
   m_Layer: 0
   m_Name: QuestionPanelManager
   m_TagString: Untagged
@@ -3029,6 +3041,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848932696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848932694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e499f05b1c6b7245af26fb0488f94b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_QuestionText: {fileID: 1565143073}
+  m_FirstAnswerButtonText: {fileID: 688061528}
+  m_SecondAnswerButtonText: {fileID: 62251483}
+  m_ThirdAnswerButtonText: {fileID: 1398467029}
+  m_FourthAnswerButtonText: {fileID: 1378305603}
 --- !u!1 &887764742
 GameObject:
   m_ObjectHideFlags: 0
@@ -4071,6 +4100,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 215519042}
+        m_MethodName: TriggerThirdBaseQuestion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1158491412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4191,6 +4231,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 215519042}
         m_MethodName: ShowQuestionPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 215519042}
+        m_MethodName: TriggerSecondBaseQuestion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5000,7 +5051,7 @@ GameObject:
   - component: {fileID: 1378305606}
   - component: {fileID: 1378305605}
   m_Layer: 5
-  m_Name: Text
+  m_Name: FourthAnswerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5283,7 +5334,7 @@ GameObject:
   - component: {fileID: 1398467032}
   - component: {fileID: 1398467031}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ThirdAnswerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5632,7 +5683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &1526667937
 Camera:
   m_ObjectHideFlags: 0
@@ -5799,10 +5850,10 @@ RectTransform:
   m_Father: {fileID: 1022563074}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.24858484, y: 0.64564526}
-  m_AnchorMax: {x: 0.75382197, y: 0.90800005}
-  m_AnchoredPosition: {x: -1.902008, y: 2}
-  m_SizeDelta: {x: 1.7999878, y: -4.1900024}
+  m_AnchorMin: {x: 0.0783225, y: 0.64564526}
+  m_AnchorMax: {x: 0.8904236, y: 0.91200006}
+  m_AnchoredPosition: {x: -0.39196777, y: 0.5}
+  m_SizeDelta: {x: -1.980011, y: -7.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565143075
 MonoBehaviour:
@@ -5826,8 +5877,8 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 109
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 5
+    m_BestFit: 1
+    m_MinSize: 30
     m_MaxSize: 109
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6777,6 +6828,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 215519042}
         m_MethodName: ShowQuestionPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 215519042}
+        m_MethodName: TriggerHomeBaseQuestion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

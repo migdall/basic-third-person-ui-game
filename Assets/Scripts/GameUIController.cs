@@ -101,6 +101,26 @@ public class GameUIController : MonoBehaviour
         m_QuestionPanel.SetActive(true);
     }
 
+    public void TriggerFirstBaseQuestion()
+    {
+        GameManager.instance.SelectQuestion(1);
+    }
+
+    public void TriggerSecondBaseQuestion()
+    {
+        GameManager.instance.SelectQuestion(2);
+    }
+
+    public void TriggerThirdBaseQuestion()
+    {
+        GameManager.instance.SelectQuestion(3);
+    }
+
+    public void TriggerHomeBaseQuestion()
+    {
+        GameManager.instance.SelectQuestion(4);
+    }
+
     public void Answer()
     {
         m_QuestionPanel.SetActive(false);

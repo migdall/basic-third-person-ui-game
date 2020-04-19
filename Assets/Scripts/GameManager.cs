@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public Vector3 playerOrigin;
 
     private QuestionManager qm;
+    private Question q;
+    private bool newQuestion;
     private bool gameOver;
     private bool menuOn;
     private bool winCondition;
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
         instance.winCondition = false;
         instance.playingGame = false;
         instance.playerRespawning = false;
+        instance.newQuestion = false;
         instance.timerValueInSeconds = timerValueInSeconds;
         instance.currentDeltaTime = 0f;
         instance.inning = 1;
@@ -63,6 +66,7 @@ public class GameManager : MonoBehaviour
         instance.blueTeamScore = 0;
 
         instance.qm = new QuestionManager();
+        instance.q = null;
     }
 
     // Update is called once per frame
@@ -188,9 +192,18 @@ public class GameManager : MonoBehaviour
         return blueTeamScore;
     }
 
-    public Question GetNextQuestion()
+    public Question GetCurrentQuestion()
     {
-        return qm.Get();
+        newQuestion = false;
+        return q;
+    }
+
+    public void SelectQuestion(int baseNumber)
+    {
+        // This method will set the new current question
+        // in the GameManager
+        q = qm.Get(baseNumber);
+        newQuestion = true;
     }
 
     public void SetReplayCondition()
@@ -203,5 +216,10 @@ public class GameManager : MonoBehaviour
     public void SetPlayerOrigin(Vector3 newOrigin)
     {
         playerOrigin = newOrigin;
+    }
+
+    public bool IsNewQuestion()
+    {
+        return newQuestion;
     }
 }
