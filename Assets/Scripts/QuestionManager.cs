@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestionManager : MonoBehaviour
+public class QuestionManager
 {
     // This script will manage the questions
 
@@ -19,7 +19,7 @@ public class QuestionManager : MonoBehaviour
         m_ThirdBaseQuestions = new Dictionary<int, Question>();
         m_HomeBaseQuestions = new Dictionary<int, Question>();
 
-        Question q1 = new Question(1, "What is the name of the first book of the Bible", 1, "Genesis", "Isaiah", "Beginning", "Matthew");
+        Question q1 = new Question(1, "What is the name of the first book of the Bible", 0, "Genesis", "Isaiah", "Beginning", "Matthew");
         m_FirstBaseQuestions.Add(1, q1);
 
         m_SecondBaseQuestions.Add(1, new Question(

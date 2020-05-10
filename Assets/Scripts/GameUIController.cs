@@ -123,9 +123,9 @@ public class GameUIController : MonoBehaviour
 
     public void Answer()
     {
-        m_QuestionPanel.SetActive(false);
-        m_TopCamera.gameObject.SetActive(true);
+        // m_QuestionPanel.SetActive(false);
+        // m_TopCamera.gameObject.SetActive(true);
 
-        m_MovePlayer = true;
+        // m_MovePlayer = true;
     }
 }

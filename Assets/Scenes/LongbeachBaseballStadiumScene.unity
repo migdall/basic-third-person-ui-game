@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 19495913}
   m_Layer: 5
   m_Name: ThirdAnswerButton
-  m_TagString: Untagged
+  m_TagString: AnswerButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,8 +203,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215519042}
-        m_MethodName: Answer
+      - m_Target: {fileID: 848932696}
+        m_MethodName: CheckThirdAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 114925126}
   m_Layer: 5
   m_Name: FirstAnswerButton
-  m_TagString: Untagged
+  m_TagString: AnswerButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,8 +409,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215519042}
-        m_MethodName: Answer
+      - m_Target: {fileID: 848932696}
+        m_MethodName: CheckFirstAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2741,7 +2741,7 @@ GameObject:
   - component: {fileID: 792663978}
   m_Layer: 5
   m_Name: SecondAnswerButton
-  m_TagString: Untagged
+  m_TagString: AnswerButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2809,8 +2809,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215519042}
-        m_MethodName: Answer
+      - m_Target: {fileID: 848932696}
+        m_MethodName: CheckSecondAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5552,7 +5552,7 @@ GameObject:
   - component: {fileID: 1517018443}
   m_Layer: 5
   m_Name: HomeAnswerButton
-  m_TagString: Untagged
+  m_TagString: AnswerButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5620,8 +5620,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215519042}
-        m_MethodName: Answer
+      - m_Target: {fileID: 848932696}
+        m_MethodName: CheckHomeAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

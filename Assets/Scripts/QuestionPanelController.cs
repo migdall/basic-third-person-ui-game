@@ -16,12 +16,6 @@ public class QuestionPanelController : MonoBehaviour
 
     private Question m_CurrentQuestion;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +28,66 @@ public class QuestionPanelController : MonoBehaviour
             m_SecondAnswerButtonText.GetComponent<Text>().text = m_CurrentQuestion.answers[1];
             m_ThirdAnswerButtonText.GetComponent<Text>().text = m_CurrentQuestion.answers[2];
             m_FourthAnswerButtonText.GetComponent<Text>().text = m_CurrentQuestion.answers[3];
+        }
+    }
+
+    public void CheckFirstAnswer()
+    {
+        if (m_CurrentQuestion != null)
+        {
+            if (m_CurrentQuestion.answerIndex == 0)
+            {
+                Debug.Log("Safe");
+            }
+            else
+            {
+                Debug.Log("Out");
+            }
+        }
+    }
+
+    public void CheckSecondAnswer()
+    {
+        if (m_CurrentQuestion != null)
+        {
+            if (m_CurrentQuestion.answerIndex == 1)
+            {
+                Debug.Log("Safe");
+            }
+            else
+            {
+                Debug.Log("Out");
+            }
+        }
+    }
+
+    public void CheckThirdAnswer()
+    {
+        if (m_CurrentQuestion != null)
+        {
+            if (m_CurrentQuestion.answerIndex == 2)
+            {
+                Debug.Log("Safe");
+            }
+            else
+            {
+                Debug.Log("Out");
+            }
+        }
+    }
+
+    public void CheckHomeAnswer()
+    {
+        if (m_CurrentQuestion != null)
+        {
+            if (m_CurrentQuestion.answerIndex == 3)
+            {
+                Debug.Log("Safe");
+            }
+            else
+            {
+                Debug.Log("Out");
+            }
         }
     }
 }
